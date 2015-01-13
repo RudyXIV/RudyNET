@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ChatSharp;
 using System.Threading.Tasks;
 
 namespace Botnet.commands
@@ -9,15 +10,25 @@ namespace Botnet.commands
     class Help : Command
     {
         public Help()
-            : base("Help")
+            : base("help")
         {
             ;
         }
             
-        override public void execute(String sender, String[] arguments)
+        override public void execute(IrcUser sender, String[] arguments, IrcChannel channel)
         {
-            Console.WriteLine("Received Command: HelpV2");
+            int helper = 0;
+            StringBuilder sb = new StringBuilder("Commands [");
+            StringBuilder sb2 = new StringBuilder();
+          
+            foreach(var Command in Program.getCommandManager().getCommands())
+            {
+                helper++;
+                sb2.Append(Command.getCatalyst() + " ");
+            }
+            sb.Append(helper + "] " + sb2);
+            channel.SendMessage(sb.ToString());
         }
-
+        //i cant hear u btw
     }
 }

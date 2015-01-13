@@ -20,6 +20,7 @@ namespace Botnet
         public void setup()
         {
             commands.Add(new Help());
+            commands.Add(new ListUsers());
             foreach (var Command in commands)
             {
                 Console.WriteLine("Loaded command -- " + Command.getCatalyst());

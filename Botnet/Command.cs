@@ -22,7 +22,7 @@ namespace Botnet
             return catalyst;
         }
 
-        public abstract void execute(String sender, String[] arguments);
+        public abstract void execute(IrcUser sender, String[] arguments, IrcChannel channel);
 
 
     }

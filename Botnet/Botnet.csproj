@@ -47,6 +47,7 @@
     <Compile Include="CommandManager.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="commands\Help.cs" />
+    <Compile Include="commands\ListUsers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
