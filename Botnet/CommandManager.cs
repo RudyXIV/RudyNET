@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Dynamic;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,19 @@ namespace Botnet
 {
     internal class CommandManager
     {
+=======
+using System.IO;
+using System.Linq;
+using System.Text;
+using Botnet.commands;
+using System.Threading.Tasks;
+
+namespace Botnet
+{
+    class CommandManager
+    {
+
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
         public static List<Command> commands = new List<Command>();
 
         public List<Command> getCommands()
@@ -24,6 +38,7 @@ namespace Botnet
         public void loadDLLs()
         {
             Directory.CreateDirectory(System.Environment.CurrentDirectory + "\\modules");
+<<<<<<< HEAD
             string[] filePaths = Directory.GetFiles(@"" + System.Environment.CurrentDirectory + "\\modules", "*.dll");
             foreach (string STR in filePaths)
             {
@@ -53,11 +68,20 @@ namespace Botnet
                 }
         }
     }
+=======
+            string[] filePaths = Directory.GetFiles(@""+System.Environment.CurrentDirectory+"\\modules", "*.dll");
+            foreach (string STR in filePaths)
+            {
+               commands.Add((Command) Activator.CreateInstance(Type.GetType(STR+"."+STR+", "+STR, true)));
+            }
+        }
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
 
         public void setup()
         {
             commands.Add(new Help());
             commands.Add(new ListUsers());
+<<<<<<< HEAD
             loadDLLs();
             foreach (var command in commands)
             {
@@ -66,3 +90,13 @@ namespace Botnet
         }
     }
 }
+=======
+            foreach (var command in commands)
+            {
+                Console.WriteLine("Loaded command -- " + command.getCatalyst());
+            }
+        }
+
+    }
+}
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf

@@ -4,6 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+<<<<<<< HEAD
     <ProjectGuid>{A187FE21-B5F2-4D58-A84F-E3A05405BA6C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -11,6 +12,17 @@
     <AssemblyName>Botnet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+=======
+    <ProjectGuid>{C2569C8F-719B-470C-B27C-7934206586A7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BotAPI</RootNamespace>
+    <AssemblyName>BotAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,15 +33,23 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+<<<<<<< HEAD
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
+=======
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+<<<<<<< HEAD
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
@@ -42,6 +62,16 @@
     <Reference Include="ChatSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Desktop\Stuff\little 2 far\bin\Debug\ChatSharp.dll</HintPath>
+=======
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChatSharp">
+      <HintPath>..\..\..\..\..\Desktop\little 2 far\bin\Debug\ChatSharp.dll</HintPath>
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,13 +83,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandManager.cs" />
+<<<<<<< HEAD
     <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\ListUsers.cs" />
+=======
+    <Compile Include="Command.cs" />
+    <Compile Include="commands\Help.cs" />
+    <Compile Include="commands\ListUsers.cs" />
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="App.config" />
+=======
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

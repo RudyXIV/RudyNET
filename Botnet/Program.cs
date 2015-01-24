@@ -5,7 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ChatSharp;
+<<<<<<< HEAD
 using BotnetModuleAPI;
+=======
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
 
 namespace Botnet
 {
@@ -66,12 +69,21 @@ namespace Botnet
                     var channel = Program.getInstance().getClient().Channels[e.PrivateMessage.Source];
                     foreach (var Command in getCommandManager().getCommands())
                     {
+<<<<<<< HEAD
                         Console.WriteLine("Checking " + Command.GetCatalyst() + " against " + arguments[0] + " with a size of " + arguments.Length);
                         Console.WriteLine("Trying to execute command : " + Command.GetCatalyst());
                         if (String.Equals(Command.GetCatalyst(), arguments[0]))
                         {
                             Console.WriteLine("Successfull evaluation of command " + Command.ToString());
                             Command.Execute(e.PrivateMessage.User, arguments, channel);
+=======
+                        Console.WriteLine("Checking " + Command.getCatalyst() + " against " + arguments[0] + " with a size of " + arguments.Length);
+                        Console.WriteLine("Trying to execute command : " + Command.getCatalyst());
+                        if (String.Equals(Command.getCatalyst(), arguments[0]))
+                        {
+                            Console.WriteLine("Successfull evaluation of command " + Command.ToString());
+                            Command.execute(e.PrivateMessage.User, arguments, channel);
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
                             break;
                         }
                         continue;
@@ -83,4 +95,8 @@ namespace Botnet
             while (true) ;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf

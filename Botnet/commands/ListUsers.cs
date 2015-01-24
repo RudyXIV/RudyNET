@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ChatSharp;
+<<<<<<< HEAD
 using BotnetModuleAPI;
+=======
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
 
 namespace Botnet.commands
 {
@@ -16,7 +19,11 @@ namespace Botnet.commands
             ;
         }
 
+<<<<<<< HEAD
         override public void Execute(IrcUser sender, String[] arguments, IrcChannel channel)
+=======
+        override public void execute(IrcUser sender, String[] arguments, IrcChannel channel)
+>>>>>>> a4e158ca0325073cf5a52165e917018a251b3acf
         {
             if (arguments.Length > 1)
             {
