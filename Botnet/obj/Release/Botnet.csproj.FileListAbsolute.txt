@@ -1,0 +1,10 @@
+c:\users\haze\documents\visual studio 2013\Projects\Botnet\Botnet\bin\Release\Botnet.exe.config
+c:\users\haze\documents\visual studio 2013\Projects\Botnet\Botnet\bin\Release\Botnet.exe
+c:\users\haze\documents\visual studio 2013\Projects\Botnet\Botnet\bin\Release\Botnet.pdb
+c:\users\haze\documents\visual studio 2013\Projects\Botnet\Botnet\bin\Release\ChatSharp.dll
+c:\users\haze\documents\visual studio 2013\Projects\Botnet\Botnet\bin\Release\ChatSharp.pdb
+c:\users\haze\documents\visual studio 2013\Projects\Botnet\Botnet\obj\Release\Botnet.exe
+c:\users\haze\documents\visual studio 2013\Projects\Botnet\Botnet\obj\Release\Botnet.pdb
+C:\Users\Haze\Documents\Visual Studio 2013\Projects\Botnet\Botnet\obj\Release\Botnet.csprojResolveAssemblyReference.cache
+C:\Users\Haze\Documents\Visual Studio 2013\Projects\Botnet\Botnet\bin\Release\BotnetModuleAPI.dll
+C:\Users\Haze\Documents\Visual Studio 2013\Projects\Botnet\Botnet\bin\Release\BotnetModuleAPI.pdb
